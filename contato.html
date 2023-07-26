@@ -1,50 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
+
 <body>
-    <ul>
+    <ul id="menu">
         <li>
-            <a href="index.html" target="_blank">Home</a>
+            <a href="index.html">Home</a>
         </li>
         <li>
-            <a href="contato.html" target="_blank">Contato</a>
+            <a href="contato.html">Contato</a>
         </li>
-        </ul>
-    <h1>Entre em contato comigo</h1>
+    </ul>
 
-    <form>
-      <label for="nome">Nome:</label><br>
-      <input type="text" id="nome">
-      <br>
-      <br>
+    <h1 class="center">Entre em contato comigo</h1>
 
-      <label for="email">E-mail:</label><br>
-      <input type="text" id="email">
-      <br>
-      <br>
+    <div class="container mb-50">
+        <div>
+            <form>
 
-      <label for="assunto">Assunto:</label><br>
-      <textare name="assunto" id="assunto" cols="30" rows="10"></textare>
-      <br>
-      <br>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" onkeyup="validaNome()" >
+            <div id="txtNome"></div>
+               
+                <br>
 
-      <button>Enviar</button>
-      <br>
-       <br>
-    </form>
+                <label for="email">E-mail:</label><br>
+                <input type="text" id="email" onkeyup="validaEmail()">
+                <div id="txtEmail"></div>
+                <br>
 
-<h2>Endereço:</h2>
+                <label for="assunto">Assunto:</label><br>
+                <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+                <div id="txtAssunto "></div>
+                <br>
 
-<p> Av. Min. Edgard Romero</p>
-<p>Rio de Janeiro - RJ, Madureira</p>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29409.077921630127!2d-43.37383621271443!3d-22.871480499594966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99632828cfcc1f%3A0x8ea83a8e6deb0e48!2sMadureira%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1689619369286!5m2!1spt-BR!2sbr" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <button onclick="enviar()">Enviar</button>
+                <br>
+                <br>
+            </form>
+        </div>
+        <div class="ml-50">
+            <h2>Endereço:</h2>
+
+            <p> Av. Min. Edgard Romero</p>
+            <p>Rio de Janeiro - RJ, Madureira</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29409.077921630127!2d-43.37383621271443!3d-22.871480499594966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99632828cfcc1f%3A0x8ea83a8e6deb0e48!2sMadureira%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1689619369286!5m2!1spt-BR!2sbr"
+                width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <a href="https://www.linkedin.com/in/gabriele-cristine-ela-dela/" target="_blank">
+                <img class="tm-social p-30" src="assets/img/linkedin.png" alt="Logo do Linkedin">
+            </a>
+
+            <a href="https://github.com/GabrieleeCris" target="_blank">
+                <img class="tm-social p-30" src="assets/img/github.png" alt="Logo do GitHub">
+            </a>
+
+            <a href="https://outlook.live.com" target="_blank">
+                <img class="tm-social p-30" src="assets/img/o-email.png" alt="Logo do E-mail">
+            </a>
+
+        </div>
+
+        <p class="center">
+            Todos os direitos reservados: Gabriele Cristine &copy;
+        </p>
+    </footer>
 
 
-
-
+<script src="js/script.js"></script>
 </body>
 </html>
